@@ -1,0 +1,89 @@
+/* Remove the default margins */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: rgb(164, 223, 247);
+}
+
+/* Align elements in the body in center */
+body {
+    color: rgb(255, 255, 255);   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;  
+}
+
+/* Application title uses different font from content */
+.appNameContainer {
+    text-align: center;
+    padding: 30px;
+}
+.appName {
+    font-family: Papyrus;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 210px;
+    height: 200px;
+}
+
+/* Center elements of the input fields */
+#addMemo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 193, 111);
+}
+
+/* Input fields use different font from title. Adds padding and margin */
+.titleInput, .datePicker, .memoInput, .submitButton {
+    font-family: Book Antiqua;
+    font-size: 15px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 3px;
+    border-width: 0cm;
+}
+
+.titleInput {
+    margin: 15px;
+}
+
+/* Both adding to database and accessing database use the same style */
+.submitButton {
+    font-family: Papyrus;
+    background-color: rgb(250, 152, 168);
+    color: white;
+    margin: 10px;
+    border-radius: 7px;
+    border-width: 0.1cm;
+    border-color: #ffffff;
+    cursor: pointer;
+}
+
+.submitButton:hover, a:hover {
+    text-decoration: none;
+    color: rgb(219, 217, 217);
+}
+
+/* Accessing database directs to another page */
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

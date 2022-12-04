@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Memowo: Record the Day!</title>
+
+    <!-- These two lines provide automatic page and style reloading when files change -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/lib/client/updater.js" defer></script>
+
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <!-- The name of the application and the picture below it -->
+    <header class="appNameContainer">
+      <h1 class="appName"><strong>Memowo: Record the Day!</strong></h1>
+      <img src="images/front_photo_test.png" alt="Yellow OWO emoji picture.">
+    </header>
+
+    <!-- The main content section of the application -->
+    <main>
+      <!-- The input fields of the application -->
+      <form id="addMemo"> 
+        <input type="text" placeholder="Title for the day!" class="titleInput" />
+        <input type="date" class="datePicker" />
+        <textarea cols="100" rows="10" placeholder="Memo for the day!" class="memoInput" ></textarea>
+        <button type="submit" class="submitButton" >
+          <strong>
+          Add to the database...
+          </strong>
+        </button>
+      </form>
+
+      <!-- Directs to the database where the memos are stored -->
+      <section id="link">
+        <button type="submit" class="submitButton">
+          <a href="/memo.html">
+          <strong>Access the database!</strong>
+          </a>
+        </button>
+      </section>
+    </main>
+
+    <!-- Link JavaScript to this page-->
+    <script type="module" src="index_page.js"></script>
+  </body>
+</html>
+

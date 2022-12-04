@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Record the Day!</title>
+
+    <!-- These two lines provide automatic page and style reloading when files change -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/lib/client/updater.js" defer></script>
+
+    <link rel="stylesheet" href="memo.css">
+  </head>
+
+  <body>
+    <!-- Title of the page plus the image below it -->
+    <header class="titleContainer">
+        <h1 class="title"><strong>Memo from Before ~</strong></h1>
+        <img src="images/memo_photo.jpg" alt="Sanrio characters banner, with the words 'Link Smile Together'.">
+    </header>
+
+    <main class="memoContainer">
+      <!-- An unordered list of user-input memo -->
+      <ul id="memos">
+        <!-- A template memo to be cloned in JavaScript -->
+        <li id="templateMemo">
+            <h2 class="heading"><strong>[TEMPLATE HEADING]</strong></h2>
+            <time class="date">[TEMPLATE DATE]</time>
+            <p class="text">[TEMPLATE PARAGRAPH]</p>
+            <button type="submit" class="submitButton">Delete!</button>
+        </li>
+      </ul>
+    </main>
+
+    <!-- A button to go back to the main page where a memo is added -->
+    <section id="bottom">
+      <!-- A tag to indicate when there is currently no memo in database -->
+      <p id="noMemos">
+        <strong>No memo currently... owo</strong>
+      </p>
+
+      <button type="submit" class="submitButton large">
+        <a href="/index.html">
+        <strong>Add another memo!</strong>
+        </a>
+      </button>
+    </section>
+
+    <!-- Link JavaScript to this page-->
+    <script type="module" src="memo_page.js"></script>
+  </body>
+</html>
+
